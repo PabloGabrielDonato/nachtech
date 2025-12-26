@@ -1,0 +1,27 @@
+	// https://aka.ms/devcontainer.json
+{
+	"name": "Nacho",
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"service": "app.dev",
+	"workspaceFolder": "/var/www/html",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"mikestead.dotenv",
+				"bmewburn.vscode-intelephense-client",
+				"amiralizadeh9480.laravel-extra-intellisense",
+				"ryannaddy.laravel-artisan",
+				"onecentlin.laravel5-snippets",
+				"onecentlin.laravel-blade"
+			],
+			"settings": {}
+		}
+	},
+	"remoteUser": "root",
+	"postCreateCommand": "bash .devcontainer/setup-permissions.sh",
+	"forwardPorts": [8000, 80, 5173, 3306, 9000]
+	// "runServices": [],
+	// "shutdownAction": "none",
+}
